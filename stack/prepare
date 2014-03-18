@@ -21,7 +21,14 @@ xargs -L 1 git clone --depth=1 < /build/buildpacks.txt
 # MISC
 #
 
+cd /tmp
+wget ftp://ftp.gnu.org/gnu/gsl/gsl-1.14.tar.gz
+tar -xf gsl-1.14.tar.gz
+cd gsl-1.14
+./configure && make && make install
+
 # Ruby buildpack system configuration
 update-alternatives --set ruby /usr/bin/ruby1.9.1
 update-alternatives --set gem /usr/bin/gem1.9.1
 gem install bundler
+
