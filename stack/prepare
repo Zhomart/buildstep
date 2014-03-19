@@ -28,11 +28,11 @@ cd gsl-1.14
 ./configure && make && make install
 
 ln -sf /usr/local/lib/libgsl.so.0 /usr/lib/libgsl.so.0
-ln -sf /usr/local/lib/libgsl.so.0 /usr/lib/libgsl.so
-ln -sf /usr/local/lib/libgsl.so.0 /lib/libgsl.so
 ln -sf /usr/local/lib/libgsl.so.0 /lib/libgsl.so.0
-ln -sf /usr/local/lib/libgsl.so.0 /lib64/libgsl.so
 ln -sf /usr/local/lib/libgsl.so.0 /lib64/libgsl.so.0
+ln -sf /usr/local/lib/libgslcblas.so.0 /usr/lib/libgslcblas.so.0
+ln -sf /usr/local/lib/libgslcblas.so.0 /lib/libgslcblas.so.0
+ln -sf /usr/local/lib/libgslcblas.so.0 /lib64/libgslcblas.so.0
 
 # Ruby buildpack system configuration
 update-alternatives --set ruby /usr/bin/ruby1.9.1
