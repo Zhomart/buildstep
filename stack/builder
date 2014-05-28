@@ -81,6 +81,7 @@ cat > /start <<EOF
 #!/bin/bash
 export HOME=/app
 for file in $app_root/.profile.d/*; do source \$file; done
+[ -f $app_root/.profile.d/app-env.sh ] && source $app_root/.profile.d/app-env.sh
 hash -r
 cd $app_root
 if [[ -f Procfile ]]; then
